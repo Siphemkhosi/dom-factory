@@ -10,7 +10,7 @@ const billStringElement = document.querySelector(".billString");
 
 //create the function that will be called when the calculate button is pressed
  
-function call(){
+function calculateBtnClicked(){
     var billString = billStringElement.value;
     var billTotal = 0;
 //  * this function should read the string value entered - split it on a comma.

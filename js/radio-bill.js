@@ -15,17 +15,17 @@ var smsTotal1r = 0;
 function calculateBtnClicked3(){
 var radioButtonElem = document.querySelector("input[name='billItemType']:checked");
 
-// if(radioButtonElem){
-//     var billString = radioButtonElem.value;
+if(radioButtonElem){
+    var billString = radioButtonElem.value;
  
-// }
-//   if(billString === "call"){
-//         callTotal1r += 2.75;
-//     }
-//     else if (billString === "sms"){
-//         smsTotal1r += 0.75;
+}
+  if(billString === "call"){
+        callTotal1r += 2.75;
+    }
+    else if (billString === "sms"){
+        smsTotal1r += 0.75;
     
-//     }
+    }
     
 
  var  smsTot  = callTotal1r.toFixed(2);
