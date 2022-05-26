@@ -87,7 +87,7 @@ it("should take 2 sms costs at 1.50 each", function(){
         
         });
  })
- describe(" use the warning  and critical levels", function(){
+ describe(" use the warning  and danger levels", function(){
 it("should  show the warning level as yellow when reached the waring level value", function(){
   let settingsBill = billWithSettings();
   settingsBill.setCallCost(1.50);
@@ -106,7 +106,7 @@ assert.equal("warning", settingsBill.totalClassName());
  
 
 });
-it("should  show the critical level as red when reached the waring level value", function(){
+it("should  show the danger level as red when reached the waring level value", function(){
     let settingsBill = billWithSettings();
     settingsBill.setCallCost(3.50);
     settingsBill.setSmsCost(1.50);
@@ -124,11 +124,11 @@ it("should  show the critical level as red when reached the waring level value",
     settingsBill.Call();
   
     
-    assert.equal("critical", settingsBill.totalClassName());
+    assert.equal("danger", settingsBill.totalClassName());
    
   
   });
-  it("should  stop counting when  the critical level value has been reached", function(){
+  it("should  stop counting when  the danger level value has been reached", function(){
     let settingsBill = billWithSettings();
     settingsBill.setCallCost(3.50);
     settingsBill.setSmsCost(1.50);
@@ -144,7 +144,7 @@ it("should  show the critical level as red when reached the waring level value",
     settingsBill.Call();
   
     
-    assert.equal("critical", settingsBill.totalClassName());
+    assert.equal("danger", settingsBill.totalClassName());
     assert.equal(21, settingsBill.billTotalCallCost());
    
   
